@@ -38,6 +38,7 @@ cd /home/$username
 chown -R $username .config
 chgrp -R $username .config
 # mv .config/vimrc /etc/vim/vimrc
+chmod +x ~/.config/qtile/autostart.sh
 
 cd $builddir
 # Add theme and icons
