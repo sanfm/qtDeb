@@ -8,7 +8,7 @@ apt update
 
 # Install base packages
 # https://wiki.archlinux.org/title/desktop_environment
-apt install xterm unzip lightdm rofi kitty thunar lxpolkit lxappearance xorg lightdm-gtk-greeter network-manager light-locker alsa-utils pulseaudio pavucontrol firefox-esr flameshot feh -y
+apt install xterm unzip lightdm rofi kitty thunar lxpolkit lxappearance xorg lightdm-gtk-greeter network-manager light-locker alsa-utils pulseaudio pavucontrol firefox-esr flameshot feh psutils -y
 
 # Install qtile
 apt install python3 -y
@@ -23,6 +23,7 @@ cp -R lightDM/* /etc/lightdm/
 
 
 # Copy configuration files
+cp dotfiles/qtile.desktop /usr/share/xsessions/
 cp .Xresources /home/$username/
 chown $username /home/$username/.Xresources
 chgrp $username /home/$username/.Xresources
