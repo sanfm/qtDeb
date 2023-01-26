@@ -37,7 +37,7 @@ ln -s themes/Dracula-mod.conf theme.conf
 cd /home/$username
 chown -R $username .config
 chgrp -R $username .config
-mv .config/vimrc /etc/vim/vimrc
+# mv .config/vimrc /etc/vim/vimrc
 
 cd $builddir
 # Add theme and icons
