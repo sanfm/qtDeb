@@ -336,8 +336,7 @@ wl_input_rules = None
 
 @hook.subscribe.startup
 def autostart():
-    #home = os.path.expanduser('/home/kali/.config/qtile/autostart.sh')
-    home = os.path.expanduser('/home/kali/.config/qtile/autostart.sh')
+    home = os.path.expanduser('/home/sanfm/.config/qtile/autostart.sh')
     subprocess.run([home])
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
