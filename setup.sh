@@ -8,12 +8,13 @@ apt update
 
 # Install base packages
 # https://wiki.archlinux.org/title/desktop_environment
-apt install xterm unzip lightdm rofi kitty thunar lxpolkit lxappearance xorg lightdm-gtk-greeter network-manager light-locker alsa-utils pulseaudio pavucontrol firefox-esr flameshot feh psutils -y
+apt install xterm unzip lightdm rofi kitty thunar lxpolkit lxappearance xorg lightdm-gtk-greeter network-manager light-locker alsa-utils pulseaudio pavucontrol firefox-esr flameshot feh -y
 
 # Install qtile
 apt install python3 -y
 apt install xserver-xorg xinit libpangocairo-1.0-0 python3-pip python3-xcffib python3-cairocffi -y
 pip install qtile
+pip install psutil
 
 
 # Enable lightdm on start up
@@ -38,7 +39,7 @@ cd /home/$username
 chown -R $username .config
 chgrp -R $username .config
 # mv .config/vimrc /etc/vim/vimrc
-chmod +x ~/.config/qtile/autostart.sh
+chmod +x /home/$username/.config/qtile/autostart.sh
 
 cd $builddir
 # Add theme and icons
