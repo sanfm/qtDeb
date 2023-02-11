@@ -22,8 +22,8 @@ o.scrolloff = 8
 o.number = true
 o.numberwidth = 2
 o.relativenumber = true
-o.signcolumn = "yes"
-o.cursorline = true
+-- o.signcolumn = "yes"
+-- o.cursorline = true
 
 -- Better editing experience
 o.expandtab = true
@@ -62,6 +62,10 @@ o.history = 50
 -- Better buffer splitting
 o.splitright = true
 o.splitbelow = true
+
+-- better search experiece
+opt.hlsearch = false
+opt.incsearch = true
 
 -- Preserve view while jumping
 -- BUG This option causes an error!
