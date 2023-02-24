@@ -1,3 +1,3 @@
 #!/bin/bash
 
-apt install python3-venv curl wget build-essential manpages-dev neovim -y
+apt install python3-venv curl wget build-essential manpages-dev -y
