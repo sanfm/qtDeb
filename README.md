@@ -50,3 +50,23 @@ nvim packer.lua
 :so
 :PackerSync
 ```
+
+
+# Zsh
+
+1. Install zsh and powerlevel10k
+
+```
+sudo apt install zsh
+
+touch "$HOME/.cache/zshhistory"
+#-- Setup Alias in $HOME/zsh/aliasrc
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+```
+
+2. Change default shell
+```
+chsh $USER
+```
+Then type: /bin/zsh
