@@ -10,6 +10,7 @@ from settings.widgets import widget_defaults, extension_defaults
 from settings.screens import screens
 from settings.mouse import mouse
 from settings.path import qtile_path
+import settings.center_first_window
 
 from os import path
 import subprocess
