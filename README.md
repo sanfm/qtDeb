@@ -20,6 +20,32 @@ usermod -aG sudo <username>
 
 Now the user has sudo privileges
 
+## Kitty install
+
+Since the kitty debian package from the apt repository is pretty outdated, I prefer installing kitty using the pre-built binaries of kitty
+
+1. Download and install
+
+```
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+```
+
+2. Add kitty to your path
+```
+ln -sf ~/.local/kitty.app/bin/kitty ~/.local/kitty.app/bin/kitten ~/.local/bin/
+```
+
+3. Make kitty icon available for your desktop
+```
+cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
+cp ~/.local/kitty.app/share/applications/kitty-open.desktop ~/.local/share/applications/
+sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty*.desktop
+sed -i "s|Exec=kitty|Exec=/home/$USER/.local/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
+```
+
+This installation guide can be found in the kitty docs:
+https://sw.kovidgoyal.net/kitty/binary/#uninstalling
+
 
 ## Nvim install and config
 
